@@ -1,0 +1,59 @@
+body {
+	background: url(track.jpg);
+      }
+      
+#racetrack {
+	position: relative;
+	width: 780px;
+	height: 780px;
+	margin: auto;
+	overflow: hidden;
+}
+
+#car{
+	position:absolute;
+	margin-left:10px;
+	height:100px;
+    width:100px;
+    -webkit-animation:rotate 10s linear infinite;
+    animation:rotate 10s linear infinite;	  
+}
+#car-orbit{
+	position:absolute;
+	margin-top:200px;
+	margin-left:150px;
+	width:400px;
+	height:400px;
+    border:25px dashed rgb(58, 57, 57);
+    border-radius:100%;
+    -webkit-animation:rotate 10s linear infinite;
+    animation:rotate 10s linear infinite;
+
+    }
+
+    @-webkit-keyframes spin{
+        100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+        }
+    }
+       
+        @keyframes spin{
+        100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+        }
+    }
+    @-webkit-keyframes spin{
+            100%{
+                 -webkit-transform:rotate(360deg);
+                    transform:rotate(360deg);
+            }
+        }
+    
+            @keyframes spin{
+            100%{
+                    -webkit-transform:rotate(360deg);
+                    transform:rotate(360deg);
+            }
+        }

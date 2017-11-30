@@ -1,0 +1,72 @@
+body {
+    background: url(track.jpg);
+    background-repeat:no-repeat; 
+      }
+      
+#racetrack {
+	position: relative;
+	width: 980px;
+	height: 980px;
+	margin: auto;
+	overflow:hidden ;
+}
+#myDog {
+    width: 200px;
+    height: 200px;
+
+
+}
+#dog{
+    height: 60px;
+    width:60px; 
+    margin-left: 591px;
+    margin-top: 145px;
+    
+}
+
+#car{
+	position:absolute;
+	margin-left:10px;
+	height:120px;
+	width:120px;
+	-webkit-animation:rotate 10s linear infinite;
+	animation:rotate 10s linear infinite;
+}	
+
+
+#car-orbit{
+	position:absolute;
+	margin-top:-35px;
+	margin-left:180px;
+	width:400px;
+	height:400px;
+	border:25px dashed rgb(58, 57, 57);
+	border-radius:100%;
+	-webkit-animation:spin 10s linear infinite;
+	animation:spin 10s linear infinite;
+	
+}
+    @-webkit-keyframes spin{
+        100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+        }
+        }
+        @keyframes spin{
+        100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+        }
+}
+@-webkit-keyframes spin{
+        100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+        }
+        }
+        @keyframes spin{
+        100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+        }
+}

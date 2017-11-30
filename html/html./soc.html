@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: lightgreen;
+}
+#halfline {
+  padding-top: 195px;
+  width: 400px;
+  height: 5px;
+  border-bottom: 5px solid white;
+}
+#halfcircle {
+  border-radius: 40px;
+  border: 5px solid white;
+  width: 80px;
+  height: 80px;
+  margin-left: 155px;
+  margin-top: -45px;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  border-radius: 40px;
+}
+</style>
+<body>
+<p>
+<button onclick="myMove()">Click To Pass</button> 
+<button onclick="myPass()">Click To Pass Back</button>
+
+</p>
+<div id ="myContainer">
+<div id ="myAnimation" class="fa fa-soccer-ball-o" style="font-size:48px;color:black">
+</div>
+<div id ="myPassBack">
+</div>
+<div id="halfline">
+</div>
+<div id="halfcircle">
+</div>
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+function myPass() {
+  var elem = document.getElementById("myPassBack");   
+  var pos = 350;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 0) {
+      clearInterval(id);
+    } else {
+      pos--; 
+      elem.style.top = pos - 'px'; 
+      elem.style.left = pos - 'px'; 
+    }
+  }
+}
+</script>
+</body>
+</html>

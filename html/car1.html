@@ -1,0 +1,66 @@
+<html>
+<head>
+<style> 
+body {
+  background: green
+  }
+  
+#imgsrc {
+  margin-top: 800px;
+  background:lightgrey;
+  
+  }  
+#myCar {
+    width: 100px;
+    height: 100px;
+    background-size: auto 100%;
+    background-image: url("http://moziru.com/images/race-car-clipart-top-17.png");
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+
+/* Standard syntax */
+@keyframes mymove {
+  0%   {top: 0px; left: 0px;}
+  05%  {top: 0px; left: 75px;}
+  10%  {top: 5px; left: 125px;  transform: rotate(5deg);}
+  11%  {top: 10px; left: 150px; transform: rotate(20deg);}
+  12%  {top: 15px; left: 175px; transform: rotate(40deg);}
+  13%  {top: 20px; left: 220px; transform: rotate(50deg);}
+  14%  {top: 25px; left: 255px; transform: rotate(70deg);}
+  15%  {top: 30px; left: 255px; transform: rotate(90deg);}
+  16%  {top: 45px; left: 255px; transform: rotate(105deg);}
+  17%  {top: 60px; left: 240px; transform: rotate(85deg);}
+  18%  {top: 75px; left: 240px; transform: rotate(75deg);}
+  19%  {top: 90px; left: 250px; transform: rotate(50deg);}
+  20%  {top: 105px; left: 275px; transform: rotate(25deg);}
+  25%  {top: 100px; left: 280px; transform: rotate(40deg);}
+  30%  {top: 105px; left: 295px; transform: rotate(20deg);}
+  35%  {top: 115px; left: 315px; transform: rotate(0deg);}
+  50% {top: 115px; left: 500px;}
+  51% {top: 120px; left: 525px; transform: rotate(25deg);}
+  52% {top: 125px; left: 550px; transform: rotate(50deg);}
+  53% {top: 130px; left: 600px; transform: rotate(0deg);}
+  54% {top: 130px; left: 650px;}
+  60% {top: 130px; left: 725px;}
+  65% {top: 130px; left: 750px; transform: rotate(-32deg);}
+  70% {top: 65px; left: 750px; transform: rotate(-75deg);}
+  75% {top: 0px; left: 730px; transform: rotate(-180deg);}
+  80% {left: 360px; transform: rotate(-180deg);}
+  90% {left: 100px; transform: rotate(-180deg);}
+  95% {top: 0px; left: -150px; transform: rotate(-180deg);}
+  100% {top: 0px; left: 0px; transform: rotate(0deg);}
+}
+</style>
+</head>
+<body>
+
+<div id="myCar"></div>
+
+<p id="imgsrc">image src <a href="http://moziru.com/images/race-car-clipart-top-17.png">http://moziru.com/images/race-car-clipart-top-17.png</a></p>
+
+</body>
+
+</html>

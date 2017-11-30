@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../img/soccer.gif">
+</head>
+
+<body>
+    <p>
+        <button onclick="myMove()">Pass</button>
+        <button onclick="myReturn()">Return Pass</button>
+    </p>
+
+    <div id="myContainer">
+        <div id="myAnimation">
+            
+        </div>
+    </div>
+    <div id="myReturn"></div>
+
+    <script>
+        function myMove() {
+            var elem = document.getElementById("myAnimation");
+            var pos = 0;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+
+        function myReturn() {
+            var elem = document.getElementById("myAnimation");
+            var pos = 0;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (pos == 0) {
+                    clearInterval(id);
+                } else {
+                    pos--;
+                    elem.style.bottom = pos + 'px';
+                    elem.style.right = pos + 'px';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

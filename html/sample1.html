@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="sample1.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+     <button onclick="myMove()">Click To Pass</button>
+    </p>
+    <div id="racetrack">
+        <div id="myDog">
+            <img src="dog.gif" id="dog">
+        </div>
+        
+        <div id="car-orbit">
+            <img src="redcar.png" id="car" />
+        </div>
+    </div>
+    <script>
+            function myDog() {
+              var elem = document.getElementById("dog");   
+              var pos = 0;
+              var id = setInterval(frame, 10);
+              function frame() {
+                if (pos == 350) {
+                  clearInterval(id);
+                } else {
+                  pos++; 
+                  elem.style.top = pos + 'px'; 
+                  elem.style.left = pos + 'px'; 
+                }
+              }
+            }
+    </script>
+
+   
+
+</body>
+
+</html>

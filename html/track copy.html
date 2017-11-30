@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .boxw {
+        background-color: #36d834;
+        height: 10px;
+        text-align: center;
+        padding-top: 200px;
+        border-bottom: 5px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-color: white;
+        border-style: solid;
+
+    }
+
+    #myContainer {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: #36d834;
+    }
+
+    #myAnimation {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-image: url("https://oss.adm.ntu.edu.sg/euge0019/wp-content/uploads/sites/314/2016/02/foolball.jpg");
+        background-size: auto 100%;
+        border-style: solid;
+        border-color: black;
+        border-radius: 50%;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    #myPlayer{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-image: url("http://www.netanimations.net/soccer_player_animated.gif");
+        background-size: auto 100%;
+    }
+</style>
+
+<body>
+
+    <p>
+        <button id="pass" onclick="myMove(); myRun();">Pass</button>
+        <button id="return" onclick="comeBack(); runBack();">Return</button>
+    </p>
+
+    <div id="myContainer">
+        <div id="myPlayer"></div>
+        <div id="myAnimation"> </div>
+        <div class="boxw"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            var elem = document.getElementById("myAnimation");
+            var pos = 0;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (pos == 250) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+        function myRun() {
+            var elem = document.getElementById("myPlayer");
+            var pos = 0;
+            var id = setInterval(frame, 13);
+
+            function frame() {
+                if (pos == 340) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.right = pos + 'px';
+                }
+            } 
+        }
+        function comeBack() {
+            var elem = document.getElementById("myAnimation");
+            var pos = 250;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (pos == 0) {
+                    clearInterval(id);
+                } else {
+                    pos--;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+        function runBack() {
+            var elem = document.getElementById("myPlayer");
+            var pos = 340;
+            var id = setInterval(frame, 13);
+            
+            function frame() {
+                if (pos == 0) {
+                    clearInterval(id);
+                } else {
+                    pos--;
+                    elem.style.top = pos + 'px';
+                    elem.style.right = pos + 'px';
+                }
+            } 
+        }
+    </script>
+
+</body>
+
+</html>

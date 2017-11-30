@@ -1,0 +1,91 @@
+body {
+  background: url(track.jpg);
+}
+
+.race-track {
+  position: relative;
+  width: 780px;
+  height: 780px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.orbit {
+  border: 20px dashed rgb(192, 29, 29);
+}
+
+ #track,
+.orbit,
+.orbit+div,
+.orbit+div>div {
+  position: absolute;
+}
+
+#track,
+.orbit,
+.orbit+div {
+  top: 50%;
+  left: 50%;
+}
+
+.orbit+div>div {
+  top: 0;
+  left: 50%;
+}
+
+.orbit,
+.orbit+div div {
+  border-radius: 50%;
+}
+
+#car {
+  margin-top: -20px;
+  margin-left: -20px;
+  height: 100px;
+  width: 10//0px;
+
+/*background-color: #3498db;
+  box-shadow: 0 0 34px #3a4385; 
+  removed background-color and box-shadow in css replaced BackGround-image in CSS at 100 px// */
+}
+
+.car-orbit,
+.car-spin {
+  margin-top: -185px;
+  margin-left: -185px;
+  width: 400px;
+  height: 400px;
+}
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.car-spin {
+  animation: spin-right 10s linear infinite;
+}
+
+.container{
+  width:500px;
+  height: 500px;
+}
+ 
+  .button1{
+   background-color: #4CAF50;
+  }
+
+  .button2{
+  background-color: #008CBA;
+} 
+
+#myDog {
+  margin-top: 100px;
+  margin-left: 100px;
+  height: 90px;
+  width: 90px;
+  position: relative;
+  background-image: url("dog.gif");
+  background-size: auto 100%;
+}

@@ -1,0 +1,53 @@
+/* CSS file for racecar track */
+
+.button {
+    background-color: gray; color: black; /* button Grey , Text Black */
+} 
+
+#racetrack {
+    width: 408px;
+    height: 500px;
+    padding-top: 66px;
+    position: relative;
+    background: rgb(40, 187, 40);
+    }
+
+#track1 {
+    border: 7px dashed #eff173;
+    padding: 64px 40px;
+    width: 100px;
+    height: 200px;
+    margin-left: 100px;
+    margin-top: -434px;
+    border-radius: 85px;
+    background: #818186;
+}
+#track2 {
+    border: 9px solid #323534;
+    width: 105px;
+    height: 229px;
+    margin-left: -11px;
+    margin-top: -22px;
+    border-radius: 127px;
+    background-color: green;
+}
+
+#track3 {
+    border: 9px solid gray;
+    width: 281px;
+    height: 502px;
+    margin-left: 49px;
+    margin-top: -43px;
+    border-radius: 145px;
+}
+
+#track4 {
+    border: 9px solid rgb(238, 236, 236);
+    width: 226px;
+    height: 385px;
+    margin-left: 18px;
+    margin-top: 46px;
+    background-color: gray;
+    border-radius: 101px;
+}
+

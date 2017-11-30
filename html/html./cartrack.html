@@ -1,0 +1,279 @@
+
+SIGNED IN AS
+pgwheeler
+Back to Slack
+Home
+Account & Profile
+Configure Apps
+Files
+Analytics
+Customize
+Workspace Settings
+Tour
+Download Apps
+Brand Guidelines
+Help
+API
+Pricing
+Contact
+Policies
+Our Blog
+Sign Out
+Made with  by Slack
+Menu Code Academy
+Workspaces
+Help
+Launch Slack
+Launch
+sblandon
+Javascript code  
+3KB JavaScript/JSON snippet created on November 16, 2017.
+
+ACTIONS
+
+1
+<!DOCTYPE html>
+2
+<html>
+3
+<style>
+4
+    .boxw {
+5
+        background-color: #36d834;
+6
+        height: 10px;
+7
+        text-align: center;
+8
+        padding-top: 200px;
+9
+        border-bottom: 5px;
+10
+        border-top: 0;
+11
+        border-left: 0;
+12
+        border-right: 0;
+13
+        border-color: white;
+14
+        border-style: solid;
+15
+​
+16
+    }
+17
+​
+18
+    #myContainer {
+19
+        width: 400px;
+20
+        height: 400px;
+21
+        position: relative;
+22
+        background: #36d834;
+23
+    }
+24
+​
+25
+    #myAnimation {
+26
+        width: 50px;
+27
+        height: 50px;
+28
+        position: absolute;
+29
+        background-image: url("https://oss.adm.ntu.edu.sg/euge0019/wp-content/uploads/sites/314/2016/02/foolball.jpg");
+30
+        background-size: auto 100%;
+31
+        border-style: solid;
+32
+        border-color: black;
+33
+        border-radius: 50%;
+34
+        margin-top: 50px;
+35
+        margin-left: 50px;
+36
+    }
+37
+    #myPlayer{
+38
+        width: 50px;
+39
+        height: 50px;
+40
+        position: absolute;
+41
+        background-image: url("http://www.netanimations.net/soccer_player_animated.gif");
+42
+        background-size: auto 100%;
+43
+    }
+44
+</style>
+45
+​
+46
+<body>
+47
+​
+48
+    <p>
+49
+        <button id="pass" onclick="myMove(); myRun();">Pass</button>
+50
+        <button id="return" onclick="comeBack(); runBack();">Return</button>
+51
+    </p>
+52
+​
+53
+    <div id="myContainer">
+54
+        <div id="myPlayer"></div>
+55
+        <div id="myAnimation"> </div>
+56
+        <div class="boxw"></div>
+57
+    </div>
+58
+​
+59
+    <script>
+60
+        function myMove() {
+61
+            var elem = document.getElementById("myAnimation");
+62
+            var pos = 0;
+63
+            var id = setInterval(frame, 10);
+64
+            function frame() {
+65
+                if (pos == 250) {
+66
+                    clearInterval(id);
+67
+                } else {
+68
+                    pos++;
+69
+                    elem.style.top = pos + 'px';
+70
+                    elem.style.left = pos + 'px';
+71
+                }
+72
+            }
+73
+        }
+74
+        function myRun() {
+75
+            var elem = document.getElementById("myPlayer");
+76
+            var pos = 0;
+77
+            var id = setInterval(frame, 13);
+78
+            function frame() {
+79
+                if (pos == 340) {
+80
+                    clearInterval(id);
+81
+                } else {
+82
+                    pos++;
+83
+                    elem.style.top = pos + 'px';
+84
+                    elem.style.left = pos + 'px';
+85
+                }
+86
+            } 
+87
+        }
+88
+        function comeBack() {
+89
+            var elem = document.getElementById("myAnimation");
+90
+            var pos = 250;
+91
+            var id = setInterval(frame, 10);
+92
+            function frame() {
+93
+                if (pos == 0) {
+94
+                    clearInterval(id);
+95
+                } else {
+96
+                    pos--;
+97
+                    elem.style.top = pos + 'px';
+98
+                    elem.style.left = pos + 'px';
+99
+                }
+100
+            }
+101
+        }
+102
+        function runBack() {
+103
+            var elem = document.getElementById("myPlayer");
+104
+            var pos = 340;
+105
+            var id = setInterval(frame, 13);
+106
+            function frame() {
+107
+                if (pos == 0) {
+108
+                    clearInterval(id);
+109
+                } else {
+110
+                    pos--;
+111
+                    elem.style.top = pos + 'px';
+112
+                    elem.style.left = pos + 'px';
+113
+                }
+114
+            } 
+115
+        }
+116
+    </script>
+117
+​
+118
+</body>
+119
+​
+120
+</html>
+ wrap long lines
+sblandon Nov 16th at 9:19 PM  
+This is the example that you should use to make the Dog to go from right to left! remember to help the dog to move faster to dont get hit by the dog.
+
+Add Comment
+Commenting in #general
